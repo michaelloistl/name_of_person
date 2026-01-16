@@ -10,8 +10,8 @@ module NameOfPerson
     end
 
     def initialize(first, last = nil)
-      raise ArgumentError, "First name is required" unless first.present?
-      @first, @last = first, last
+      # raise ArgumentError, "First name is required" unless first.present?
+      @first, @last = first.to_s, last
       super full
     end
 
